@@ -1,0 +1,8 @@
+### Get post 1
+GET http://localhost:3333/return
+
+### Get 2
+GET http://localhost:3333/especific
+
+### Get all
+GET http://localhost:3333/hello
