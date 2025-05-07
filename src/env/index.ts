@@ -1,7 +1,7 @@
 import 'dotenv/config'
 import {z} from 'zod' // for schemas
 
-console.log('PORT antes da validação:', process.env.PORT)
+// console.log('PORT antes da validação:', process.env.PORT)
 
 
 const envSchema = z.object({
@@ -13,10 +13,11 @@ const envSchema = z.object({
 const _env = envSchema.safeParse(process.env)
 
 if(_env.success === false){
-    console.error('❌ Invalid environment variables!', _env.error.format())
+    console.error('Invalid environment variables!', _env.error.format())
 
     throw new Error('Invalid environment variables.')
 }
 
 export const env = _env.data
+
 
