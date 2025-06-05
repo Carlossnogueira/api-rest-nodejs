@@ -1,9 +1,8 @@
 import 'dotenv/config'
 import {z} from 'zod' // for schemas
 
-// console.log('PORT antes da validação:', process.env.PORT)
 
-
+// validando o .env
 const envSchema = z.object({
     NODE_ENV: z.enum(['development','test','production']).default('production'),
     DATABASE_URL: z.string(),
