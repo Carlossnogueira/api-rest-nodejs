@@ -17,6 +17,7 @@
     "eslint": "^8.57.1"
   },
   "dependencies": {
+    "@fastify/cookie": "^11.0.2",
     "dotenv": "^16.5.0",
     "eslit": "^6.0.0",
     "fastify": "^5.3.2",
