@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
     "knex": "tsx ./node_modules/knex/bin/cli.js",
     "dev": "tsx watch src/server.ts",
     "lint": "eslint src --ext .ts --fix"
@@ -14,10 +14,12 @@
   "description": "",
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",
-    "eslint": "^8.57.1"
+    "eslint": "^8.57.1",
+    "supertest": "^7.1.1"
   },
   "dependencies": {
     "@fastify/cookie": "^11.0.2",
+    "@types/supertest": "^6.0.3",
     "dotenv": "^16.5.0",
     "eslit": "^6.0.0",
     "fastify": "^5.3.2",
@@ -25,6 +27,7 @@
     "sqlite3": "^5.1.7",
     "tsx": "^4.19.3",
     "typescript": "^5.2.0-dev.20230726",
+    "vitest": "^3.2.4",
     "zod": "^3.24.3"
   }
 }

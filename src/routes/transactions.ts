@@ -6,7 +6,10 @@ import { checkSessionIdExists } from '../middlewares/check-session-id-exists'
 
 export async function transactionsRoutes(app: FastifyInstance) {
 
-  // Cookies
+  // Handler global: Dispara nesse contexto ao executar
+  app.addHook('preHandler', async(request,reply) =>{
+    console.log(`[${request.method}]  ${request.url}`)
+  })
 
   // listando todas as transações
   // executando um middlare de verificação de sessão
