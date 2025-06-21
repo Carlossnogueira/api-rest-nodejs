@@ -6,7 +6,8 @@
     "test": "vitest",
     "knex": "tsx ./node_modules/knex/bin/cli.js",
     "dev": "tsx watch src/server.ts",
-    "lint": "eslint src --ext .ts --fix"
+    "lint": "eslint src --ext .ts --fix",
+    "build": "tsup src --out-dir build"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +16,8 @@
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",
     "eslint": "^8.57.1",
-    "supertest": "^7.1.1"
+    "supertest": "^7.1.1",
+    "tsup": "^8.5.0"
   },
   "dependencies": {
     "@fastify/cookie": "^11.0.2",
