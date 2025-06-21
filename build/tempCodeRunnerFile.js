@@ -1,1 +1,0 @@
-var __create = Object.create;
