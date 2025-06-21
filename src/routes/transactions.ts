@@ -33,7 +33,7 @@ export async function transactionsRoutes(app: FastifyInstance) {
     const { sessionId } = request.cookies
     const sumary = await knex('transactions')
     .where('session_id', sessionId)
-    .sum('amount', { as: 'amout' })
+    .sum('amount', { as: 'amount' })
     .first()
     return { sumary }
   })

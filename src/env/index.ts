@@ -1,6 +1,11 @@
-import 'dotenv/config'
-import {z} from 'zod' // for schemas
+import { config } from 'dotenv'
+import { z } from 'zod' // for schemas
 
+if (process.env.NODE_ENV === 'test') {
+  config({ path: '.env.test' })
+} else {
+  config()
+}
 
 // validando o .env
 const envSchema = z.object({
